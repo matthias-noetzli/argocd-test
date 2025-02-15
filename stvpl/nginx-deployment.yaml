@@ -23,7 +23,14 @@ spec:
       containers:
         - image: hfhnom/stvpl-nginx:latest
           name: nginx
+          volumeMounts:
+          - name: nginx-config-volume
+            mountPath: /etc/nginx/conf.d
           ports:
             - containerPort: 80
               protocol: TCP
       restartPolicy: Always
+      volumes:
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config
