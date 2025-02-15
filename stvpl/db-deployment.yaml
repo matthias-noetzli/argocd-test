@@ -18,26 +18,17 @@ spec:
     spec:
       containers:
         - env:
-            - name: MARIADB_DATABASE
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_DATABASE
-                  name: env-docker
-            - name: MARIADB_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_PASSWORD
-                  name: env-docker
             - name: MARIADB_ROOT_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   key: MARIADB_ROOT_PASSWORD
                   name: env-docker
+            - name: MARIADB_DATABASE
+              value: stvpl
+            - name: MARIADB_PASSWORD
+              value: admin
             - name: MARIADB_USER
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_USERNAME
-                  name: env-docker
+              value: admin
           image: mariadb:lts
           name: db
           volumeMounts:
