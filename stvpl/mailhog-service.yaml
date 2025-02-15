@@ -5,7 +5,7 @@ metadata:
     kompose.cmd: kompose convert
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: mailhog
+    app: mailhog
   name: mailhog
 spec:
   ports:
@@ -13,4 +13,4 @@ spec:
       port: 8025
       targetPort: 8025
   selector:
-    io.kompose.service: mailhog
+    app: mailhog

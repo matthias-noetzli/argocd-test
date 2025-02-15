@@ -5,20 +5,20 @@ metadata:
     kompose.cmd: kompose convert
     kompose.version: 1.35.0 (9532ceef3)
   labels:
-    io.kompose.service: php
+    app: php
   name: php
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: php
+      app: php
   template:
     metadata:
       annotations:
         kompose.cmd: kompose convert
         kompose.version: 1.35.0 (9532ceef3)
       labels:
-        io.kompose.service: php
+        app: php
     spec:
       containers:
         - env:
