@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zask-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zask
+  template:
+    metadata:
+      labels:
+        app: zask
+    spec:
+      containers:
+      - name: zask
+        image: hfhnom/zask:latest
