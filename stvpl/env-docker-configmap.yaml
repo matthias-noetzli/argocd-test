@@ -1,0 +1,41 @@
+apiVersion: v1
+data:
+  APP_DEBUG: "false"
+  APP_ENV: production
+  APP_KEY: base64:0ZrFEpKLDR41jrH0ozzj0sA0gzJLFhKuvXOQ4i6d4AU=
+  APP_NAME: Studienverlaufsplaner
+  APP_URL: http://127.0.0.1:8000
+  BROADCAST_DRIVER: log
+  CACHE_DRIVER: file
+  DB_CONNECTION: mysql
+  DB_DATABASE: stvpl
+  DB_HOST: db
+  DB_PASSWORD: admin
+  DB_PORT: "3306"
+  DB_USERNAME: admin
+  DEBUGBAR_ENABLED: "FALSE"
+  FILESYSTEM_DRIVER: local
+  LOG_CHANNEL: stderr
+  LOG_DEPRECATIONS_CHANNEL: "null"
+  LOG_LEVEL: debug
+  MAIL_ENCRYPTION: "null"
+  MAIL_FROM_ADDRESS: test@exampl.com
+  MAIL_FROM_NAME: The Sender
+  MAIL_HOST: mailhog
+  MAIL_MAILER: smtp
+  MAIL_PASSWORD: "null"
+  MAIL_PORT: "1025"
+  MAIL_USERNAME: "null"
+  MARIADB_ROOT_PASSWORD: p*@qjfX$!qSt2^6@
+  MEMCACHED_HOST: 127.0.0.1
+  QUEUE_CONNECTION: sync
+  REDIS_HOST: 127.0.0.1
+  REDIS_PASSWORD: "null"
+  REDIS_PORT: "6379"
+  SESSION_DRIVER: file
+  SESSION_LIFETIME: "120"
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: db-env-docker
+  name: env-docker
