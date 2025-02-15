@@ -15,3 +15,5 @@ spec:
       containers:
       - name: zask
         image: hfhnom/zask:latest
+      imagePullSecrets:
+      - name: argocdkey
