@@ -18,178 +18,25 @@ spec:
     spec:
       containers:
         - env:
-            - name: APP_DEBUG
-              valueFrom:
-                configMapKeyRef:
-                  key: APP_DEBUG
-                  name: env-docker
-            - name: APP_ENV
-              valueFrom:
-                configMapKeyRef:
-                  key: APP_ENV
-                  name: env-docker
-            - name: APP_KEY
-              valueFrom:
-                configMapKeyRef:
-                  key: APP_KEY
-                  name: env-docker
-            - name: APP_NAME
-              valueFrom:
-                configMapKeyRef:
-                  key: APP_NAME
-                  name: env-docker
-            - name: APP_URL
-              valueFrom:
-                configMapKeyRef:
-                  key: APP_URL
-                  name: env-docker
-            - name: BROADCAST_DRIVER
-              valueFrom:
-                configMapKeyRef:
-                  key: BROADCAST_DRIVER
-                  name: env-docker
-            - name: CACHE_DRIVER
-              valueFrom:
-                configMapKeyRef:
-                  key: CACHE_DRIVER
-                  name: env-docker
-            - name: DB_CONNECTION
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_CONNECTION
-                  name: env-docker
-            - name: DB_DATABASE
+            - name: MARIADB_DATABASE
               valueFrom:
                 configMapKeyRef:
                   key: DB_DATABASE
                   name: env-docker
-            - name: DB_HOST
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_HOST
-                  name: env-docker
-            - name: DB_PASSWORD
+            - name: MARIADB_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   key: DB_PASSWORD
                   name: env-docker
-            - name: DB_PORT
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_PORT
-                  name: env-docker
-            - name: DB_USERNAME
-              valueFrom:
-                configMapKeyRef:
-                  key: DB_USERNAME
-                  name: env-docker
-            - name: DEBUGBAR_ENABLED
-              valueFrom:
-                configMapKeyRef:
-                  key: DEBUGBAR_ENABLED
-                  name: env-docker
-            - name: FILESYSTEM_DRIVER
-              valueFrom:
-                configMapKeyRef:
-                  key: FILESYSTEM_DRIVER
-                  name: env-docker
-            - name: LOG_CHANNEL
-              valueFrom:
-                configMapKeyRef:
-                  key: LOG_CHANNEL
-                  name: env-docker
-            - name: LOG_DEPRECATIONS_CHANNEL
-              valueFrom:
-                configMapKeyRef:
-                  key: LOG_DEPRECATIONS_CHANNEL
-                  name: env-docker
-            - name: LOG_LEVEL
-              valueFrom:
-                configMapKeyRef:
-                  key: LOG_LEVEL
-                  name: env-docker
-            - name: MAIL_ENCRYPTION
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_ENCRYPTION
-                  name: env-docker
-            - name: MAIL_FROM_ADDRESS
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_FROM_ADDRESS
-                  name: env-docker
-            - name: MAIL_FROM_NAME
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_FROM_NAME
-                  name: env-docker
-            - name: MAIL_HOST
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_HOST
-                  name: env-docker
-            - name: MAIL_MAILER
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_MAILER
-                  name: env-docker
-            - name: MAIL_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_PASSWORD
-                  name: env-docker
-            - name: MAIL_PORT
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_PORT
-                  name: env-docker
-            - name: MAIL_USERNAME
-              valueFrom:
-                configMapKeyRef:
-                  key: MAIL_USERNAME
-                  name: env-docker
-            - name: MARIADB_DATABASE
-            - name: MARIADB_PASSWORD
             - name: MARIADB_ROOT_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   key: MARIADB_ROOT_PASSWORD
                   name: env-docker
             - name: MARIADB_USER
-            - name: MEMCACHED_HOST
               valueFrom:
                 configMapKeyRef:
-                  key: MEMCACHED_HOST
-                  name: env-docker
-            - name: QUEUE_CONNECTION
-              valueFrom:
-                configMapKeyRef:
-                  key: QUEUE_CONNECTION
-                  name: env-docker
-            - name: REDIS_HOST
-              valueFrom:
-                configMapKeyRef:
-                  key: REDIS_HOST
-                  name: env-docker
-            - name: REDIS_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  key: REDIS_PASSWORD
-                  name: env-docker
-            - name: REDIS_PORT
-              valueFrom:
-                configMapKeyRef:
-                  key: REDIS_PORT
-                  name: env-docker
-            - name: SESSION_DRIVER
-              valueFrom:
-                configMapKeyRef:
-                  key: SESSION_DRIVER
-                  name: env-docker
-            - name: SESSION_LIFETIME
-              valueFrom:
-                configMapKeyRef:
-                  key: SESSION_LIFETIME
+                  key: DB_USERNAME
                   name: env-docker
           image: mariadb:lts
           name: db
