@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: db-migrate
-        image: curlimages/curl
+        image: hfhnom/stvpl-php:latest
         command:
           - "php"
           - "artisan"
