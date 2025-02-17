@@ -53,4 +53,12 @@ spec:
                 configMapKeyRef:
                   key: DB_USERNAME
                   name: env-docker
+          readinessProbe:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - "mysqladmin ping -h $DB_HOST -u $DB_USERNAME -p$DB_PASSWORD"
+            initialDelaySeconds: 5
+            periodSeconds: 10
       restartPolicy: Never
