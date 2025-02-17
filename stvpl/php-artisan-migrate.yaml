@@ -1,15 +1,16 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generate-name: db-migrate-
+  generate-name: php-artisan-migrate-
   annotations:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   template:
     spec:
       containers:
-        - name: db-migrate
+        - name: php-artisan-migrate
           image: hfhnom/stvpl-php:latest
           command:
             - "php"
