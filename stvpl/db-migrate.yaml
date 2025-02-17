@@ -15,4 +15,5 @@ spec:
           - "php"
           - "artisan"
           - "migrate"
+          - "--force"
       restartPolicy: Never
