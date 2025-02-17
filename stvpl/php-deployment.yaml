@@ -146,11 +146,6 @@ spec:
                 configMapKeyRef:
                   key: MAIL_USERNAME
                   name: env-docker
-            - name: MARIADB_ROOT_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  key: MARIADB_ROOT_PASSWORD
-                  name: env-docker
             - name: MEMCACHED_HOST
               valueFrom:
                 configMapKeyRef:
