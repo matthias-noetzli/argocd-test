@@ -9,47 +9,47 @@ spec:
   template:
     spec:
       containers:
-        name: db-migrate
-        image: hfhnom/stvpl-php:latest
-        command:
-          - "php"
-          - "artisan"
-          - "migrate"
-          - "--force"
-        env:
-          - name: APP_ENV
-            valueFrom:
-              configMapKeyRef:
-                key: APP_ENV
-                name: env-docker
-          - name: DB_CONNECTION
-            valueFrom:
-              configMapKeyRef:
-                key: DB_CONNECTION
-                name: env-docker
-          - name: DB_DATABASE
-            valueFrom:
-              configMapKeyRef:
-                key: DB_DATABASE
-                name: env-docker
-          - name: DB_HOST
-            valueFrom:
-              configMapKeyRef:
-                key: DB_HOST
-                name: env-docker
-          - name: DB_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                key: DB_PASSWORD
-                name: env-docker
-          - name: DB_PORT
-            valueFrom:
-              configMapKeyRef:
-                key: DB_PORT
-                name: env-docker
-          - name: DB_USERNAME
-            valueFrom:
-              configMapKeyRef:
-                key: DB_USERNAME
-                name: env-docker
+        - name: db-migrate
+          image: hfhnom/stvpl-php:latest
+          command:
+            - "php"
+            - "artisan"
+            - "migrate"
+            - "--force"
+          env:
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_ENV
+                  name: env-docker
+            - name: DB_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_CONNECTION
+                  name: env-docker
+            - name: DB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_DATABASE
+                  name: env-docker
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_HOST
+                  name: env-docker
+            - name: DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_PASSWORD
+                  name: env-docker
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_PORT
+                  name: env-docker
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_USERNAME
+                  name: env-docker
       restartPolicy: Never
