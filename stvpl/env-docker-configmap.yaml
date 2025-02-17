@@ -30,7 +30,7 @@ data:
   MAIL_HOST: mailhog
   MAIL_MAILER: smtp
   MAIL_PASSWORD: "null"
-  MAIL_PORT: "1025"
+  MAIL_PORT: "8025"
   MAIL_USERNAME: "null"
   MEMCACHED_HOST: 127.0.0.1
   QUEUE_CONNECTION: sync
