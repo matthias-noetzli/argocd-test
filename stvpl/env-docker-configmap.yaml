@@ -4,7 +4,6 @@ metadata:
   name: env-docker
   annotations:
     argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
     argocd.argoproj.io/sync-wave: "-3"
 data:
   APP_DEBUG: "false"
