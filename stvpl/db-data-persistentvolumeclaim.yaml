@@ -4,6 +4,10 @@ metadata:
   labels:
     app: db-data
   name: db-data
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "-3"
 spec:
   accessModes:
     - ReadWriteOnce
